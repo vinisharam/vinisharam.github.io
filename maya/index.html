@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>玛雅maya发信到-玛雅文明与Maya软件中的信息传递全解析</title>
+<meta name="description" content="围绕“玛雅maya发信到”这一搜索需求，解析玛雅文明的信息传递方式、Maya软件中发送与导出到不同目标的操作思路，以及常见问题与注意事项。">
+<meta name="keywords" content="玛雅maya发信到,玛雅文明,信息传递,Maya软件,发送到,导出到">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --bg:#0f1419;
+  --bg-soft:#161d25;
+  --panel:#1c2530;
+  --panel-2:#222d3a;
+  --line:#2c3947;
+  --text:#e8edf2;
+  --text-dim:#9fb0c0;
+  --accent:#e0a33e;
+  --accent-2:#3fa6a0;
+  --accent-3:#c96a4a;
+  --radius:10px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+
+/* ---------- 顶部 ---------- */
+.topbar{
+  background:linear-gradient(90deg,#111820,#1a2531);
+  border-bottom:1px solid var(--line);
+  font-size:13px;
+  color:var(--text-dim);
+}
+.topbar .wrap{
+  max-width:1180px;margin:0 auto;padding:8px 20px;
+  display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
+}
+.topbar span.dot{color:var(--accent);}
+
+header.site-header{
+  background:var(--bg-soft);
+  border-bottom:1px solid var(--line);
+  position:sticky;top:0;z-index:50;
+}
+.header-wrap{
+  max-width:1180px;margin:0 auto;padding:14px 20px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand .logo{
+  width:42px;height:42px;border-radius:8px;
+  background:linear-gradient(135deg,var(--accent),var(--accent-3));
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:20px;color:#1a1206;
+  flex-shrink:0;
+}
+.brand h1{font-size:19px;font-weight:700;letter-spacing:.5px;}
+.brand p{font-size:12px;color:var(--text-dim);letter-spacing:1px;}
+
+nav.main-nav ul{list-style:none;display:flex;gap:6px;flex-wrap:wrap;}
+nav.main-nav a{
+  display:block;padding:7px 14px;border-radius:6px;
+  font-size:14px;color:var(--text-dim);transition:.2s;
+}
+nav.main-nav a:hover{background:var(--panel-2);color:var(--text);}
+nav.main-nav a.active{background:rgba(224,163,62,.14);color:var(--accent);}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  background:
+    radial-gradient(900px 380px at 82% 10%,rgba(63,166,160,.16),transparent 70%),
+    radial-gradient(700px 340px at 8% 90%,rgba(201,106,74,.14),transparent 70%),
+    linear-gradient(180deg,#131a22,#0f1419);
+  border-bottom:1px solid var(--line);
+  padding:56px 20px 48px;
+}
+.hero-inner{
+  max-width:1180px;margin:0 auto;
+  display:grid;grid-template-columns:1.55fr 1fr;gap:40px;align-items:start;
+}
+.hero .kicker{
+  display:inline-block;font-size:12px;letter-spacing:2px;
+  color:var(--accent-2);border:1px solid rgba(63,166,160,.4);
+  padding:4px 12px;border-radius:20px;margin-bottom:18px;
+}
+.hero h2{
+  font-size:34px;line-height:1.35;font-weight:700;margin-bottom:16px;
+}
+.hero h2 em{color:var(--accent);font-style:normal;}
+.hero p.lead{font-size:16px;color:var(--text-dim);margin-bottom:22px;max-width:620px;}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.btn{
+  display:inline-block;padding:11px 24px;border-radius:8px;
+  font-size:14px;font-weight:600;transition:.2s;border:1px solid transparent;
+}
+.btn-primary{background:var(--accent);color:#1a1206;}
+.btn-primary:hover{background:#efb659;}
+.btn-ghost{border-color:var(--line);color:var(--text-dim);}
+.btn-ghost:hover{border-color:var(--accent-2);color:var(--accent-2);}
+
+.hero-side{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:22px;
+}
+.hero-side h3{
+  font-size:14px;color:var(--accent);letter-spacing:1px;
+  padding-bottom:10px;border-bottom:1px dashed var(--line);margin-bottom:14px;
+}
+.hero-side ul{list-style:none;}
+.hero-side li{
+  display:flex;gap:10px;padding:9px 0;
+  border-bottom:1px solid rgba(44,57,71,.6);
+  font-size:14px;color:var(--text-dim);
+}
+.hero-side li:last-child{border-bottom:none;}
+.hero-side li b{color:var(--accent-2);font-weight:600;flex-shrink:0;}
+
+/* ---------- 通用区块 ---------- */
+main{max-width:1180px;margin:0 auto;padding:0 20px;}
+section.block{padding:52px 0 8px;}
+.section-head{margin-bottom:26px;}
+.section-head .eyebrow{
+  font-size:12px;letter-spacing:2px;color:var(--accent-3);
+  text-transform:uppercase;margin-bottom:8px;
+}
+.section-head h2{font-size:25px;font-weight:700;margin-bottom:10px;}
+.section-head p{color:var(--text-dim);font-size:15px;max-width:820px;}
+
+/* ---------- 双栏概念解析 ---------- */
+.split{
+  display:grid;grid-template-columns:1fr 1fr;gap:24px;
+}
+.concept{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:26px;
+  position:relative;
+  overflow:hidden;
+}
+.concept::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:var(--accent);
+}
+.concept.alt::before{background:var(--accent-2);}
+.concept h3{font-size:18px;margin-bottom:12px;}
+.concept .tag{
+  display:inline-block;font-size:11px;padding:2px 9px;border-radius:4px;
+  background:rgba(224,163,62,.14);color:var(--accent);margin-bottom:12px;
+}
+.concept.alt .tag{background:rgba(63,166,160,.14);color:var(--accent-2);}
+.concept p{font-size:14.5px;color:var(--text-dim);margin-bottom:12px;}
+.concept ul{list-style:none;font-size:14px;color:var(--text-dim);}
+.concept ul li{padding-left:18px;position:relative;margin-bottom:7px;}
+.concept ul li::before{
+  content:"";position:absolute;left:0;top:10px;
+  width:6px;height:6px;border-radius:50%;background:var(--accent);
+}
+.concept.alt ul li::before{background:var(--accent-2);}
+
+/* ---------- 步骤流程 ---------- */
+.steps{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+  counter-reset:step;
+}
+.step{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:22px 20px;
+  position:relative;
+}
+.step .num{
+  counter-increment:step;
+  font-size:13px;font-weight:700;color:#1a1206;
+  width:28px;height:28px;border-radius:50%;
+  background:var(--accent);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:14px;
+}
+.step h4{font-size:15.5px;margin-bottom:9px;}
+.step p{font-size:13.5px;color:var(--text-dim);}
+
+/* ---------- 场景卡片 ---------- */
+.scene-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.scene{
+  background:linear-gradient(160deg,var(--panel-2),var(--panel));
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:24px;
+  transition:.25s;
+}
+.scene:hover{transform:translateY(-3px);border-color:rgba(224,163,62,.5);}
+.scene .ico{
+  width:38px;height:38px;border-radius:8px;margin-bottom:14px;
+  background:rgba(63,166,160,.14);color:var(--accent-2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:17px;font-weight:700;
+}
+.scene h4{font-size:16px;margin-bottom:9px;}
+.scene p{font-size:14px;color:var(--text-dim);}
+
+/* ---------- 常见问题 ---------- */
+.faq-list{display:flex;flex-direction:column;gap:12px;}
+details.faq{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:0 20px;
+  transition:.2s;
+}
+details.faq[open]{border-color:rgba(224,163,62,.45);}
+details.faq summary{
+  list-style:none;cursor:pointer;
+  padding:16px 0;font-size:15.5px;font-weight:600;
+  display:flex;justify-content:space-between;align-items:center;gap:14px;
+}
+details.faq summary::-webkit-details-marker{display:none;}
+details.faq summary::after{
+  content:"+";color:var(--accent);font-size:19px;font-weight:400;flex-shrink:0;
+}
+details.faq[open] summary::after{content:"–";}
+details.faq .faq-body{
+  padding:0 0 18px;font-size:14.5px;color:var(--text-dim);
+  border-top:1px solid rgba(44,57,71,.7);padding-top:14px;
+}
+
+/* ---------- 提示条 ---------- */
+.notice{
+  background:rgba(201,106,74,.1);
+  border:1px solid rgba(201,106,74,.35);
+  border-left:4px solid var(--accent-3);
+  border-radius:var(--radius);
+  padding:18px 22px;
+  margin:34px 0 0;
+  font-size:14.5px;
+  color:#e7d3c9;
+}
+.notice strong{color:var(--accent-3);}
+
+/* ---------- 页脚 ---------- */
+footer.site-footer{
+  margin-top:64px;
+  background:var(--bg-soft);
+  border-top:1px solid var(--line);
+  padding:44px 20px 26px;
+}
+.footer-inner{
+  max-width:1180px;margin:0 auto;
+  display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;
+}
+.footer-inner h5{
+  font-size:14px;color:var(--text);margin-bottom:14px;letter-spacing:.5px;
+}
+.footer-inner p{font-size:13.5px;color:var(--text-dim);}
+.footer-inner ul{list-style:none;}
+.footer-inner ul li{margin-bottom:9px;}
+.footer-inner ul a{font-size:13.5px;color:var(--text-dim);transition:.2s;}
+.footer-inner ul a:hover{color:var(--accent);}
+.footer-bottom{
+  max-width:1180px;margin:30px auto 0;padding-top:18px;
+  border-top:1px solid var(--line);
+  font-size:12.5px;color:#6d7d8c;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:980px){
+  .hero-inner{grid-template-columns:1fr;}
+  .split{grid-template-columns:1fr;}
+  .steps{grid-template-columns:repeat(2,1fr);}
+  .scene-grid{grid-template-columns:repeat(2,1fr);}
+  .footer-inner{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:640px){
+  body{font-size:15px;}
+  .hero{padding:38px 16px 34px;}
+  .hero h2{font-size:25px;}
+  .header-wrap{padding:12px 16px;}
+  nav.main-nav ul{gap:2px;}
+  nav.main-nav a{padding:6px 10px;font-size:13px;}
+  main{padding:0 16px;}
+  section.block{padding:38px 0 4px;}
+  .section-head h2{font-size:21px;}
+  .steps{grid-template-columns:1fr;}
+  .scene-grid{grid-template-columns:1fr;}
+  .footer-inner{grid-template-columns:1fr;gap:24px;}
+  .concept{padding:20px;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div>玛雅文明 · Maya 工具 · 信息传递知识整理</div>
+    <div><span class="dot">●</span> 内容持续校对更新</div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="header-wrap">
+    <div class="brand">
+      <div class="logo">M</div>
+      <div>
+        <h1>玛雅发信到 · 知识站</h1>
+        <p>MAYA MESSAGING GUIDE</p>
+      </div>
+    </div>
+    <nav class="main-nav" aria-label="主导航">
+      <ul>
+        <li><a href="#intro" class="active">概念解读</a></li>
+        <li><a href="#civilization">文明视角</a></li>
+        <li><a href="#software">软件视角</a></li>
+        <li><a href="#steps">操作思路</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="kicker">搜索意图梳理</span>
+      <h2>“玛雅maya发信到”到底指什么？<br>从<em>古代玛雅</em>到<em>Maya 软件</em>的两条线索</h2>
+      <p class="lead">
+        这个关键词存在明显的歧义：它既可能指向古代玛雅文明如何把信息“发送到”远方，也可能指向 Autodesk Maya 等三维工具中把文件、数据或消息“发送到”某个目标位置。本页把两条线索分开讲清楚，帮助你快速定位自己真正想了解的内容。
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#intro">开始阅读</a>
+        <a class="btn btn-ghost" href="#faq">直接看常见问题</a>
+      </div>
+    </div>
+    <aside class="hero-side">
+      <h3>本页要点速览</h3>
+      <ul>
+        <li><b>01</b> 玛雅文明的信息记录与传递方式</li>
+        <li><b>02</b> Maya 软件中“发送到 / 导出到”的含义</li>
+        <li><b>03</b> 不同目标位置的格式与兼容性差异</li>
+        <li><b>04</b> 操作前的检查清单与常见报错方向</li>
+        <li><b>05</b> 容易混淆的相关概念区分</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<main>
+
+  <!-- 概念解读 -->
+  <section class="block" id="intro">
+    <div class="section-head">
+      <div class="eyebrow">Concept</div>
+      <h2>先分清：你说的“玛雅”是哪一个</h2>
+      <p>同一个中文词“玛雅”对应两个完全不同的领域，理解这一点，后面的所有内容才不会串线。</p>
+    </div>
+    <div class="split">
+      <article class="concept">
+        <span class="tag">历史 · 文明</span>
+        <h3>玛雅文明中的“发信到”</h3>
+        <p>
+          古代玛雅没有现代意义上的邮政或电子通信系统，其信息传递依托于文字、图像、口述与人力信使。所谓“发信到”，更接近“把消息记录并送达某个地点或某个人”的过程。
+        </p>
+        <ul>
+          <li>以石碑、祭坛、阶梯等建筑载体刻写重要事件与历法信息</li>
+          <li>用树皮纸抄本记录天文、祭祀与王朝谱系</li>
+          <li>依靠信使沿道路网络传递口头与实物信息</li>
+          <li>信息内容高度依赖祭司、书吏等特定阶层解读</li>
+        </ul>
+      </article>
+      <article class="concept alt">
+        <span class="tag">软件 · 工具</span>
+        <h3>Maya 软件中的“发信到”</h3>
+        <p>
+          在 Autodesk Maya 这类三维制作软件里，“发送到”通常不是发电子邮件，而是把当前场景、模型、材质或数据交给另一个目标：另一个软件、另一个项目文件，或某个渲染与协作环节。
+        </p>
+        <ul>
+          <li>把模型或场景导出到其他三维软件继续制作</li>
+          <li>把数据发送到渲染农场或本地渲染队列</li>
+          <li>把资产发送到团队共享的工程目录</li>
+          <li>把结果发送到下游环节，如合成、剪辑或引擎</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- 文明视角 -->
+  <section class="block" id="civilization">
+    <div class="section-head">
+      <div class="eyebrow">Civilization</div>
+      <h2>玛雅文明视角：信息如何被“送到”远方</h2>
+      <p>如果你关注的是历史与文化方向，可以从“载体、路径、解读”三个层面理解玛雅的信息传递。</p>
+    </div>
+    <div class="scene-grid">
+      <article class="scene">
+        <div class="ico">载</div>
+        <h4>载体：把信息固定下来</h4>
+        <p>
+          玛雅人把重要信息刻在石质建筑上，或写在树皮纸抄本中。石质载体耐久但不易搬运，抄本便于携带却容易损毁，两者承担了不同的传递任务。
+        </p>
+      </article>
+      <article class="scene">
+        <div class="ico">路</div>
+        <h4>路径：谁把消息带走</h4>
+        <p>
+          城邦之间通过道路网络与信使保持联系，口头消息、结绳记事式的辅助记忆以及实物信物，都是把信息“发送到”另一地的常见方式。
+        </p>
+      </article>
+      <article class="scene">
+        <div class="ico">解</div>
+        <h4>解读：信息需要被读懂</h4>
+        <p>
+          玛雅文字与历法体系复杂，普通居民难以独立解读。信息能否真正“送达”，很大程度取决于接收方是否有能读懂的书吏或祭司。
+        </p>
+      </article>
+      <article class="scene">
+        <div class="ico">时</div>
+        <h4>时间：历法与事件记录</h4>
+        <p>
+          玛雅人习惯为事件标注具体日期，长纪历与历法循环让信息带有明确的时间坐标，这也是其记录体系的重要特征。
+        </p>
+      </article>
+      <article class="scene">
+        <div class="ico">存</div>
+        <h4>留存：为什么今天还能看到</h4>
+        <p>
+          石碑与建筑遗迹因材质坚固而保留较多，抄本则因气候与人为因素存世极少。今天我们了解玛雅，很大程度上依赖考古发现与文字破译成果。
+        </p>
+      </article>
+      <article class="scene">
+        <div class="ico">辨</div>
+        <h4>辨析：避免过度想象</h4>
+        <p>
+          关于玛雅“通信系统”的说法在网络上有不少夸张演绎。严谨的做法是区分考古证据、文献记载与流行文化想象，不轻易下绝对结论。
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 软件视角 -->
+  <section class="block" id="software">
+    <div class="section-head">
+      <div class="eyebrow">Software</div>
+      <h2>Maya 软件视角：“发送到”通常指这几类操作</h2>
+      <p>如果你是在使用三维软件时遇到这个说法，下面这些场景最接近你实际遇到的问题。</p>
+    </div>
+    <div class="split">
+      <article class="concept">
+        <span class="tag">跨软件</span>
+        <h3>发送到其他三维或引擎工具</h3>
+        <p>
+          把 Maya 中完成的模型、绑定或动画交给别的工具继续处理，是常见需求。关键在于目标工具支持的格式，以及坐标轴、单位、材质与骨骼信息的兼容程度。
+        </p>
+        <ul>
+          <li>通用交换格式适合几何体与基础动画</li>
+          <li>引擎专用格式通常对材质与骨骼有额外要求</li>
+          <li>导出前建议清理历史、统一单位与坐标朝向</li>
+        </ul>
+      </article>
+      <article class="concept alt">
+        <span class="tag">渲染与协作</span>
+        <h3>发送到渲染队列或团队目录</h3>
+        <p>
+          把场景提交给渲染环节，或把资产发送到共享工程目录，是制作流程中的高频操作。这类“发送到”更强调路径、权限和依赖文件是否完整。
+        </p>
+        <ul>
+          <li>确认贴图、缓存等外部依赖是否一并打包</li>
+          <li>确认目标机器或目录的读写权限</li>
+          <li>确认渲染设置与输出路径符合流程约定</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- 操作思路 -->
+  <section class="block" id="steps">
+    <div class="section-head">
+      <div class="eyebrow">Workflow</div>
+      <h2>通用操作思路：四步减少“发送失败”</h2>
+      <p>不论目标是另一个软件、渲染队列还是共享目录，都可以按下面的顺序自查。</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h4>明确目标</h4>
+        <p>先确认要发送到哪里、对方需要什么格式，再决定导出方式，避免做完再返工。</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h4>整理场景</h4>
+        <p>清理无用节点与历史记录，统一单位与坐标朝向，减少接收方打开时的异常。</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h4>检查依赖</h4>
+        <p>贴图、缓存、参考文件等外部资源要一并确认，避免对方打开后出现丢材质。</p>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <h4>验证结果</h4>
+        <p>在目标环境里实际打开或渲染一次，确认信息完整送达，再进入下一步流程。</p>
+      </div>
+    </div>
+
+    <div class="notice">
+      <strong>提醒：</strong>不同软件版本、不同插件对格式的支持范围并不一致。涉及具体项目时，应以你所用版本的官方文档和团队流程规范为准，不要仅凭经验套用。
+    </div>
+  </section>
+
+  <!-- 常见问题 -->
+  <section class="block" id="faq">
+    <div class="section-head">
+      <div class="eyebrow">FAQ</div>
+      <h2>常见问题</h2>
+      <p>整理自搜索这个关键词时最容易被问到的几个方向。</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq" open>
+        <summary>“玛雅maya发信到”到底是在说历史还是软件？</summary>
+        <div class="faq-body">
+          两者都有可能。如果上下文涉及文明、考古、文字，那就是历史方向；如果上下文涉及建模、动画、渲染、导出，那就是 Maya 软件方向。判断关键词所在语境，是理解这个搜索词的第一步。
+        </div>
+      </details>
+      <details class="faq">
+        <summary>古代玛雅真的有类似“邮政”的系统吗？</summary>
+        <div class="faq-body">
+          目前没有证据表明玛雅存在现代意义上的邮政体系。更稳妥的理解是：他们通过信使、道路网络、口头传递与刻写记录等方式，实现信息在不同地点之间的流动。具体组织形式在不同时期和地区可能存在差异。
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Maya 里“发送到”其他软件时，最容易出问题的地方是什么？</summary>
+        <div class="faq-body">
+          常见问题集中在单位与坐标朝向不一致、材质无法完整迁移、骨骼与蒙皮信息丢失、外部贴图路径失效等。提前确认目标格式的支持范围，并在目标环境中做一次验证，能规避大部分问题。
+        </div>
+      </details>
+      <details class="faq">
+        <summary>把场景发送到渲染环节前，需要准备什么？</summary>
+        <div class="faq-body">
+          建议确认渲染设置、输出路径、帧范围是否正确，贴图与缓存等依赖文件是否齐全，以及目标机器是否具备对应的软件版本与插件。流程规范不同，具体要求也会有所差别。
+        </div>
+      </details>
+      <details class="faq">
+        <summary>为什么网上关于玛雅的说法差异很大？</summary>
+        <div class="faq-body">
+          玛雅研究本身涉及考古、文字破译、天文学等多个领域，新发现会不断修正旧认识；同时，流行文化中存在大量演绎与夸张内容。阅读时区分“学术共识”“学界推测”和“网络传说”，能减少误解。
+        </div>
+      </details>
+      <details class="faq">
+        <summary>这个页面会持续更新吗？</summary>
+        <div class="faq-body">
+          页面会围绕这一关键词持续补充与校对内容。如果你发现表述不严谨或需要补充的方向，可以把它当作一份可迭代的知识整理来使用。
+        </div>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <h5>玛雅发信到 · 知识站</h5>
+      <p>围绕“玛雅maya发信到”这一关键词，分别整理古代玛雅信息传递与 Maya 软件数据发送两个方向的基础知识，帮助读者快速定位所需内容。</p>
+    </div>
+    <div>
+      <h5>内容导航</h5>
+      <ul>
+        <li><a href="#intro">概念解读</a></li>
+        <li><a href="#civilization">文明视角</a></li>
+        <li><a href="#software">软件视角</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>实用参考</h5>
+      <ul>
+        <li><a href="#steps">操作思路</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>阅读建议</h5>
+      <ul>
+        <li>区分语境再理解关键词</li>
+        <li>以官方文档为最终依据</li>
+        <li>谨慎对待未经验证的说法</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>本站内容为知识性整理，具体操作请以所用软件版本与官方说明为准。</span>
+    <span>玛雅发信到 · 内容持续校对</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var links = document.querySelectorAll('nav.main-nav a');
+  var sections = [];
+  links.forEach(function(a){
+    var id = a.getAttribute('href').replace('#','');
+    var el = document.getElementById(id);
+    if(el){ sections.push({link:a, el:el}); }
+  });
+  function onScroll(){
+    var pos = window.scrollY + 140;
+    var current = sections.length ? sections[0] : null;
+    sections.forEach(function(s){
+      if(s.el.offsetTop <= pos){ current = s; }
+    });
+    links.forEach(function(a){ a.classList.remove('active'); });
+    if(current){ current.link.classList.add('active'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+
+</body>
+  </html>
