@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>挠脚心动漫-轻松搞笑动漫推荐与观看指南</title>
+<meta name="description" content="挠脚心动漫专题站，整理轻松搞笑、日常治愈类动漫的观看顺序、作品特点与选择建议，帮助喜欢轻松氛围动漫的观众快速找到适合自己的作品。">
+<meta name="keywords" content="挠脚心动漫,搞笑动漫,轻松动漫,日常治愈动漫,动漫推荐,动漫观看指南">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+  :root{
+    --bg:#fdf6ee;
+    --bg-soft:#fff9f2;
+    --ink:#2f2a26;
+    --ink-soft:#6d635a;
+    --line:#ecdfd0;
+    --accent:#f08a4b;
+    --accent-deep:#d96a26;
+    --accent-soft:#ffe6d3;
+    --mint:#5fb3a1;
+    --mint-soft:#e2f4f0;
+    --card:#ffffff;
+    --radius:16px;
+    --shadow:0 10px 30px rgba(120,90,60,.08);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  h1,h2,h3{margin:0;line-height:1.35;}
+  p{margin:0 0 1em;}
+  ul{margin:0;padding:0;list-style:none;}
+
+  .wrap{width:min(1160px,92%);margin:0 auto;}
+
+  /* ---------- 顶部 ---------- */
+  .topbar{
+    background:linear-gradient(120deg,#fff1e2 0%,#ffe3cb 55%,#ffe9d6 100%);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:16px;padding:14px 0;flex-wrap:wrap;
+  }
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand-mark{
+    width:46px;height:46px;border-radius:14px;
+    background:var(--accent);
+    display:grid;place-items:center;
+    color:#fff;font-size:22px;font-weight:700;
+    box-shadow:0 6px 16px rgba(240,138,75,.35);
+    flex:none;
+  }
+  .brand-text b{display:block;font-size:19px;letter-spacing:.5px;}
+  .brand-text span{font-size:12.5px;color:var(--ink-soft);letter-spacing:1px;}
+
+  nav.mainnav ul{display:flex;gap:6px;flex-wrap:wrap;}
+  nav.mainnav a{
+    display:inline-block;padding:8px 14px;border-radius:999px;
+    font-size:14.5px;color:var(--ink-soft);transition:.2s;
+  }
+  nav.mainnav a:hover{background:#fff;color:var(--accent-deep);box-shadow:var(--shadow);}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:52px 0 44px;}
+  .hero-grid{
+    display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;
+  }
+  .hero h1{font-size:clamp(28px,4.2vw,44px);letter-spacing:.5px;}
+  .hero h1 em{
+    font-style:normal;color:var(--accent-deep);
+    background:linear-gradient(transparent 62%,var(--accent-soft) 62%);
+    padding:0 4px;
+  }
+  .hero-lead{margin-top:18px;font-size:16.5px;color:var(--ink-soft);max-width:56ch;}
+  .hero-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;}
+  .tag{
+    background:#fff;border:1px solid var(--line);border-radius:999px;
+    padding:6px 14px;font-size:13.5px;color:var(--ink-soft);
+  }
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px;}
+  .btn{
+    display:inline-block;padding:12px 26px;border-radius:999px;
+    font-size:15px;font-weight:600;transition:.2s;border:1px solid transparent;
+  }
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(240,138,75,.32);}
+  .btn-primary:hover{background:var(--accent-deep);transform:translateY(-1px);}
+  .btn-ghost{background:#fff;color:var(--accent-deep);border-color:var(--line);}
+  .btn-ghost:hover{border-color:var(--accent);}
+
+  .hero-panel{
+    background:var(--card);border-radius:22px;padding:26px;
+    box-shadow:var(--shadow);border:1px solid var(--line);
+  }
+  .hero-panel h3{font-size:16px;margin-bottom:14px;color:var(--accent-deep);}
+  .hero-panel li{
+    display:flex;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line);
+    font-size:14.5px;color:var(--ink-soft);
+  }
+  .hero-panel li:last-child{border-bottom:none;}
+  .hero-panel li i{
+    font-style:normal;flex:none;width:24px;height:24px;border-radius:8px;
+    background:var(--mint-soft);color:var(--mint);
+    display:grid;place-items:center;font-size:12.5px;font-weight:700;
+  }
+
+  /* ---------- 通用区块 ---------- */
+  section.block{padding:46px 0;}
+  .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:26px;}
+  .sec-head h2{font-size:clamp(21px,2.6vw,27px);}
+  .sec-head p{margin:8px 0 0;color:var(--ink-soft);font-size:14.5px;max-width:62ch;}
+  .sec-head .line{height:3px;width:52px;background:var(--accent);border-radius:3px;margin-bottom:10px;}
+
+  /* ---------- 分类 ---------- */
+  .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .cat-card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px;transition:.22s;
+  }
+  .cat-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--accent-soft);}
+  .cat-icon{
+    width:42px;height:42px;border-radius:12px;display:grid;place-items:center;
+    font-size:19px;margin-bottom:14px;background:var(--accent-soft);color:var(--accent-deep);
+  }
+  .cat-card:nth-child(2) .cat-icon{background:var(--mint-soft);color:var(--mint);}
+  .cat-card:nth-child(3) .cat-icon{background:#eef1ff;color:#6b7bd6;}
+  .cat-card:nth-child(4) .cat-icon{background:#fdeef3;color:#d4698f;}
+  .cat-card h3{font-size:16.5px;margin-bottom:8px;}
+  .cat-card p{font-size:14px;color:var(--ink-soft);margin:0;}
+
+  /* ---------- 推荐列表 ---------- */
+  .rec-list{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .rec-item{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    overflow:hidden;display:flex;flex-direction:column;transition:.22s;
+  }
+  .rec-item:hover{box-shadow:var(--shadow);transform:translateY(-3px);}
+  .rec-top{
+    padding:16px 20px;background:linear-gradient(120deg,#fff5ea,#ffeada);
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+  }
+  .rec-top b{font-size:15.5px;}
+  .rec-top span{font-size:12px;color:var(--accent-deep);background:#fff;border-radius:999px;padding:3px 10px;}
+  .rec-body{padding:18px 20px 22px;flex:1;display:flex;flex-direction:column;}
+  .rec-body p{font-size:14.2px;color:var(--ink-soft);margin:0 0 14px;}
+  .rec-meta{margin-top:auto;font-size:13px;color:var(--ink-soft);display:flex;gap:14px;flex-wrap:wrap;}
+  .rec-meta em{font-style:normal;color:var(--accent-deep);}
+
+  /* ---------- 观看指南 ---------- */
+  .guide{
+    background:var(--bg-soft);border:1px solid var(--line);border-radius:22px;
+    padding:34px;display:grid;grid-template-columns:1.1fr .9fr;gap:34px;
+  }
+  .guide h2{font-size:clamp(20px,2.4vw,25px);margin-bottom:14px;}
+  .guide ol{margin:0;padding-left:20px;color:var(--ink-soft);font-size:15px;}
+  .guide ol li{margin-bottom:14px;padding-left:4px;}
+  .guide ol li b{color:var(--ink);}
+  .guide-note{
+    background:#fff;border-radius:16px;padding:22px;border:1px dashed var(--accent-soft);
+  }
+  .guide-note h3{font-size:15.5px;color:var(--accent-deep);margin-bottom:10px;}
+  .guide-note p{font-size:14.2px;color:var(--ink-soft);margin:0 0 12px;}
+  .guide-note p:last-child{margin-bottom:0;}
+
+  /* ---------- 榜单 ---------- */
+  .rank{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+  .rank-row{
+    display:flex;gap:14px;align-items:flex-start;
+    background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;
+  }
+  .rank-no{
+    flex:none;width:30px;height:30px;border-radius:10px;display:grid;place-items:center;
+    font-weight:700;font-size:14px;background:var(--accent-soft);color:var(--accent-deep);
+  }
+  .rank-row:nth-child(2) .rank-no{background:#ffe9c9;color:#c98a1d;}
+  .rank-row:nth-child(3) .rank-no{background:var(--mint-soft);color:var(--mint);}
+  .rank-row:nth-child(4) .rank-no{background:#eef1ff;color:#6b7bd6;}
+  .rank-row b{display:block;font-size:15px;margin-bottom:4px;}
+  .rank-row p{margin:0;font-size:13.6px;color:var(--ink-soft);}
+
+  /* ---------- FAQ ---------- */
+  .faq-list{display:grid;gap:14px;}
+  .faq-item{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:20px 22px;
+  }
+  .faq-item h3{font-size:15.5px;margin-bottom:8px;display:flex;gap:10px;align-items:flex-start;}
+  .faq-item h3::before{
+    content:"Q";flex:none;width:22px;height:22px;border-radius:7px;
+    background:var(--accent);color:#fff;font-size:12.5px;display:grid;place-items:center;
+    margin-top:3px;
+  }
+  .faq-item p{margin:0;font-size:14.3px;color:var(--ink-soft);padding-left:32px;}
+
+  /* ---------- 页脚 ---------- */
+  footer{
+    background:#2f2a26;color:#cfc6bd;margin-top:40px;padding:44px 0 26px;
+  }
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px;}
+  .foot-brand b{color:#fff;font-size:17px;display:block;margin-bottom:10px;}
+  .foot-brand p{font-size:13.6px;color:#a89e94;margin:0;max-width:42ch;}
+  .foot-col h4{color:#fff;font-size:14.5px;margin:0 0 12px;}
+  .foot-col li{font-size:13.6px;color:#a89e94;margin-bottom:8px;}
+  .foot-bottom{
+    border-top:1px solid #443c35;margin-top:30px;padding-top:18px;
+    font-size:13px;color:#8e857c;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  }
+
+  /* ---------- 响应式 ---------- */
+  @media (max-width:980px){
+    .hero-grid{grid-template-columns:1fr;gap:28px;}
+    .cat-grid{grid-template-columns:repeat(2,1fr);}
+    .rec-list{grid-template-columns:repeat(2,1fr);}
+    .guide{grid-template-columns:1fr;padding:26px;}
+    .foot-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:640px){
+    .topbar-inner{justify-content:center;text-align:center;}
+    nav.mainnav ul{justify-content:center;}
+    .hero{padding:34px 0 30px;}
+    section.block{padding:34px 0;}
+    .cat-grid{grid-template-columns:1fr;}
+    .rec-list{grid-template-columns:1fr;}
+    .rank{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr;}
+    .sec-head{margin-bottom:20px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="brand">
+      <div class="brand-mark">挠</div>
+      <div class="brand-text">
+        <b>挠脚心动漫</b>
+        <span>轻松搞笑 · 日常治愈</span>
+      </div>
+    </div>
+    <nav class="mainnav" aria-label="主导航">
+      <ul>
+        <li><a href="#types">类型分类</a></li>
+        <li><a href="#picks">作品推荐</a></li>
+        <li><a href="#guide">观看指南</a></li>
+        <li><a href="#rank">人气参考</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>挠脚心动漫：<em>轻松搞笑与日常治愈</em>的观看入口</h1>
+        <p class="hero-lead">
+          “挠脚心”常被用来形容那种让人忍不住发笑、心里发痒的轻松感觉。围绕这一氛围，
+          这里整理了以幽默、日常、治愈为主线的动漫类型说明、选片思路和观看建议，
+          帮助你在想放松的时候快速找到对味的作品。
+        </p>
+        <div class="hero-tags">
+          <span class="tag">轻松搞笑</span>
+          <span class="tag">日常治愈</span>
+          <span class="tag">短篇泡面番</span>
+          <span class="tag">校园喜剧</span>
+          <span class="tag">治愈系</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#picks">查看推荐方向</a>
+          <a class="btn btn-ghost" href="#guide">了解选片方法</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel">
+        <h3>先搞清楚三件事</h3>
+        <ul>
+          <li><i>1</i><span>确定自己想要的是“笑出声”还是“被治愈”，两者节奏完全不同。</span></li>
+          <li><i>2</i><span>留意单集时长，泡面番与常规番的观看体验差别很大。</span></li>
+          <li><i>3</i><span>优先选择正规平台已上线的作品，观看更稳定、画质更有保障。</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 类型分类 -->
+  <section class="block" id="types">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="line"></div>
+          <h2>按氛围挑选：四种常见的轻松向类型</h2>
+          <p>同样是“看着开心”，不同子类型的笑点来源、情绪走向和适合场景并不一样，先分清方向再选片会省下不少时间。</p>
+        </div>
+      </div>
+
+      <div class="cat-grid">
+        <article class="cat-card">
+          <div class="cat-icon">😆</div>
+          <h3>搞笑吐槽型</h3>
+          <p>以密集的台词梗、夸张演出和节奏反差制造笑点，适合想快速放松、不需要连续追剧负担的观众。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon">🍃</div>
+          <h3>日常治愈型</h3>
+          <p>剧情推进缓慢，重在生活细节与人际温度，适合睡前或情绪疲惫时观看，节奏平缓不刺激。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon">🎒</div>
+          <h3>校园喜剧型</h3>
+          <p>围绕社团、同学关系展开，笑点贴近日常经验，容易产生共鸣，也常带有青春成长线索。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon">⏱️</div>
+          <h3>短篇泡面番</h3>
+          <p>单集时长较短，适合碎片时间观看。笑点集中、结构简单，入门门槛低，也方便随时中断。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 作品推荐 -->
+  <section class="block" id="picks">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="line"></div>
+          <h2>推荐方向：按需求找片更高效</h2>
+          <p>下面按观看需求划分推荐方向，只说明作品类型特征与适配场景，不涉及具体评分与排名，方便你按自己的偏好判断。</p>
+        </div>
+      </div>
+
+      <div class="rec-list">
+        <article class="rec-item">
+          <div class="rec-top"><b>想快速笑一下</b><span>节奏优先</span></div>
+          <div class="rec-body">
+            <p>优先选择单集结构完整、笑点前置的作品。这类作品通常不依赖长期剧情铺垫，随便点开一集都能看懂。</p>
+            <div class="rec-meta"><em>适合</em><span>碎片时间 / 通勤</span></div>
+          </div>
+        </article>
+
+        <article class="rec-item">
+          <div class="rec-top"><b>想安静放松</b><span>氛围优先</span></div>
+          <div class="rec-body">
+            <p>选择以生活场景为主、冲突较弱的治愈向作品。画面色调柔和、配乐舒缓，适合作为睡前或休息时的陪伴内容。</p>
+            <div class="rec-meta"><em>适合</em><span>睡前 / 周末</span></div>
+          </div>
+        </article>
+
+        <article class="rec-item">
+          <div class="rec-top"><b>想边看边聊</b><span>话题优先</span></div>
+          <div class="rec-body">
+            <p>带有明显角色设定与互动关系的校园喜剧更容易引发讨论，适合与朋友一起看或参与弹幕、评论区交流。</p>
+            <div class="rec-meta"><em>适合</em><span>多人同看 / 讨论</span></div>
+          </div>
+        </article>
+
+        <article class="rec-item">
+          <div class="rec-top"><b>刚接触轻松向</b><span>入门优先</span></div>
+          <div class="rec-body">
+            <p>从短篇泡面番或单元剧结构入手，观看压力小，也不需要记住复杂设定，适合作为这一类型的入门选择。</p>
+            <div class="rec-meta"><em>适合</em><span>新观众</span></div>
+          </div>
+        </article>
+
+        <article class="rec-item">
+          <div class="rec-top"><b>想找情绪出口</b><span>共鸣优先</span></div>
+          <div class="rec-body">
+            <p>关注以工作、生活压力为背景的轻喜剧，笑点之外常带有温和的情绪疏解，看完更容易平静下来。</p>
+            <div class="rec-meta"><em>适合</em><span>压力较大时</span></div>
+          </div>
+        </article>
+
+        <article class="rec-item">
+          <div class="rec-top"><b>想长期追更</b><span>连载优先</span></div>
+          <div class="rec-body">
+            <p>选择篇幅较长、设定稳定的系列作品，角色关系会随剧情逐步展开，适合愿意长期跟随的观众。</p>
+            <div class="rec-meta"><em>适合</em><span>固定追番习惯</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 观看指南 -->
+  <section class="block" id="guide">
+    <div class="wrap">
+      <div class="guide">
+        <div>
+          <h2>观看指南：从选片到追更的四个步骤</h2>
+          <ol>
+            <li><b>先定情绪目标。</b>想笑、想放松、想被安慰，对应的作品节奏差别很大。先想清楚当下需要哪种情绪，再去看简介和标签。</li>
+            <li><b>看单集时长与集数。</b>短篇适合碎片时间，长篇适合固定追更。避免因为篇幅判断失误导致中途弃番。</li>
+            <li><b>试看前两集。</b>轻松向作品的风格在前两集通常已经成型，如果这两集无法让你产生兴趣，后续大概率也不会改变。</li>
+            <li><b>选择正规观看渠道。</b>通过已获得授权的平台观看，画质、字幕和播放稳定性更有保障，也更利于作品持续更新。</li>
+          </ol>
+        </div>
+        <aside class="guide-note">
+          <h3>选片时容易忽略的细节</h3>
+          <p>标签只能说明大致方向，同一标签下的作品风格可能相差很远。建议同时看简介、角色设定和观众评论中的关键词描述。</p>
+          <p>如果对某类笑点比较敏感，可以先了解作品是否存在容易引起不适的桥段，再决定是否观看。</p>
+          <p>轻松向作品不等于没有剧情，部分作品会在喜剧外壳下埋入成长或情感线索，这类作品的观看体验通常更持久。</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 人气参考 -->
+  <section class="block" id="rank">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="line"></div>
+          <h2>人气参考维度</h2>
+          <p>以下为常见的判断维度，用于帮助你在缺少明确推荐时快速筛选，不代表具体作品排名。</p>
+        </div>
+      </div>
+
+      <div class="rank">
+        <div class="rank-row">
+          <div class="rank-no">01</div>
+          <div>
+            <b>讨论热度</b>
+            <p>评论区与社区讨论是否活跃，通常能反映作品在观众中的传播程度和话题性。</p>
+          </div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-no">02</div>
+          <div>
+            <b>口碑稳定度</b>
+            <p>长期评价是否平稳，比短期高分更能说明作品的整体完成度和观看体验。</p>
+          </div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-no">03</div>
+          <div>
+            <b>观看门槛</b>
+            <p>是否需要前置设定或长期追更才能理解，门槛越低越适合作为入门选择。</p>
+          </div>
+        </div>
+        <div class="rank-row">
+          <div class="rank-no">04</div>
+          <div>
+            <b>重看价值</b>
+            <p>轻松向作品常被反复观看，能否在已知剧情的情况下依然觉得有趣，是重要参考。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="line"></div>
+          <h2>常见问题</h2>
+          <p>关于轻松搞笑、日常治愈类动漫的常见疑问，这里给出相对稳妥的说明。</p>
+        </div>
+      </div>
+
+      <div class="faq-list">
+        <article class="faq-item">
+          <h3>“挠脚心动漫”具体指哪一部作品？</h3>
+          <p>它更多是一种氛围描述，用来指代让人感到轻松、忍不住发笑的动漫内容，而不是特指某一部固定作品。不同观众理解的范围可能略有差异。</p>
+        </article>
+        <article class="faq-item">
+          <h3>轻松向动漫适合哪些观看场景？</h3>
+          <p>常见于通勤、午休、睡前或需要放松情绪的时候。由于剧情压力较小，这类作品也适合与家人朋友一起观看。</p>
+        </article>
+        <article class="faq-item">
+          <h3>第一次接触这类作品，从哪里开始比较好？</h3>
+          <p>建议从单集时长较短、结构简单的作品入手，先确认自己偏好搞笑型还是治愈型，再逐步尝试篇幅更长的系列。</p>
+        </article>
+        <article class="faq-item">
+          <h3>在哪里可以观看这类动漫？</h3>
+          <p>建议通过已获得正规授权的视频平台观看。具体上线情况会随版权与地区变化，可以在平台内按类型标签检索确认。</p>
+        </article>
+        <article class="faq-item">
+          <h3>看轻松向作品需要按顺序追吗？</h3>
+          <p>大多数单元剧结构作品不强制按顺序观看，但带有连续主线的系列仍建议从第一集开始，以免错过角色关系的变化。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <b>挠脚心动漫</b>
+        <p>一个围绕轻松搞笑与日常治愈类动漫的内容整理页面，提供类型说明、选片思路与观看建议，帮助你更高效地找到想看的内容。</p>
+      </div>
+      <div class="foot-col">
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#types">类型分类</a></li>
+          <li><a href="#picks">作品推荐</a></li>
+          <li><a href="#guide">观看指南</a></li>
+          <li><a href="#rank">人气参考</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>观看提示</h4>
+        <ul>
+          <li>优先选择正规授权平台</li>
+          <li>注意合理安排观看时间</li>
+          <li>按个人偏好选择内容</li>
+          <li>尊重作品版权与创作者</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>本站内容为动漫类型整理与观看建议，具体作品上线情况以各平台实际信息为准。</span>
+      <span>© 挠脚心动漫 · 内容整理页</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var links = document.querySelectorAll('nav.mainnav a[href^="#"]');
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener('click', function () {
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
+  })();
+</script>
+
+</body>
+  </html>
